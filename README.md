@@ -35,7 +35,6 @@ You can find many articles regarding linux so please google.
 <project name="CyanogenMod/android_device_samsung_msm8660-common" path="device/samsung/msm8660-common" remote="github" revision="cm-11.0" />
 <project name="CyanogenMod/android_device_samsung_celox-common" path="device/samsung/celox-common" remote="github" revision="cm-11.0" />
 <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="cm-11.0" />
-<project name="Hellybean/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" remote="github" revision="cm-11.0" />
 <project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" remote="github" revision="cm-11.0" />
 <project name="TheMuppets/proprietary_vendor_samsung.git" path="vendor/samsung" remote="github" revision="cm-11.0" />
 <project name="Socim/android_device_samsung_e120" path="device/samsung/e120l" revision=“cm-11.0-e120l" />
@@ -50,7 +49,7 @@ repo sync -j16
 
 
 
-### Get all the prebuilts, like ROM Manager:
+### Get all the prebuilts:
 ```
 vendor/cm/get-prebuilts
 ```
