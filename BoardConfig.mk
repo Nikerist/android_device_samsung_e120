@@ -37,19 +37,20 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 TARGET_OTA_ASSERT_DEVICE := SHV-E120L,dali
 
 # Kernel
-# BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 usb_id_pin_rework=true no_console_suspend=true zcache  androidboot.selinux=permissive
-# BOARD_KERNEL_BASE           := 0x40400000
-# BOARD_KERNEL_PAGESIZE       := 2048
-# BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01400000
+BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 usb_id_pin_rework=true no_console_suspend=true zcache  androidboot.selinux=permissive
+BOARD_KERNEL_BASE           := 0x40400000
+BOARD_KERNEL_PAGESIZE       := 2048
+BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01400000
 
-# TARGET_KERNEL_CONFIG        := cyanogenmod_e120l_defconfig
-# TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
+TARGET_KERNEL_CONFIG        := cyanogenmod_dalil_defconfig
+TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
-TARGET_PREBUILT_KERNEL      := device/samsung/e120l/kernel/zImage
+# Or use prebuilt Kernel
+#TARGET_PREBUILT_KERNEL      := device/samsung/e120l/kernel/zImage
 
-KERNEL_EXTERNAL_MODULES:
-	$(TARGET_OBJCOPY) device/samsung/e120l/kernel/modules/*.ko $(KERNEL_MODULES_OUT)/
-TARGET_KERNEL_MODULES := KERNEL_EXTERNAL_MODULES
+#KERNEL_EXTERNAL_MODULES:
+#	$(TARGET_OBJCOPY) device/samsung/e120l/kernel/modules/*.ko $(KERNEL_MODULES_OUT)/
+#TARGET_KERNEL_MODULES := KERNEL_EXTERNAL_MODULES
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
